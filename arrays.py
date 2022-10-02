@@ -1,4 +1,4 @@
-# Arrays
+# Arrays (Following Neetcodes Questions)
 # CONTAINS DUPLICATE
 def contains_duplicate(nums):
     """
@@ -34,3 +34,30 @@ def twoSum(nums, target):
     return -1
 
 print(twoSum(nums,target))
+
+
+# isAnagram
+# O(n^2)
+
+s = "anagram"
+t = "nagaram"
+
+def isAnagram_brute(s,t):
+     """
+        create two hash sets to store the counts of each string.
+        When looping, add the letter and add 1 + hash.get(value if exists, or it becomes 0)
+        Then compare the hash sets     
+    :param s: string
+    :param t: string
+    :return:  Boolean
+    """
+    hash_s = {}
+    hash_t = {}
+    for i in range(len(s)):
+        hash_s[s[i]] = 1 + hash_s.get(s[i], 0)
+        hash_t[t[i]] = 1 + hash_t.get(t[i], 0)
+    print(hash_t)
+    print(hash_s)
+    return hash_s == hash_t
+
+print(isAnagram_brute(s,t))
