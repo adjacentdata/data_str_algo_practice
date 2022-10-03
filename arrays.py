@@ -61,3 +61,22 @@ def isAnagram_brute(s,t):
     return hash_s == hash_t
 
 print(isAnagram_brute(s,t))
+
+# REPLACE MAX IN LIST
+
+def replace_max_element(arr):
+    """
+    Iterate backwards. len(arr)-1, -1,-1
+        Create a new max but start the ending array with a -1.
+        then start the iteration finding the new max
+        replace element with the current max all the way to the end
+    :param arr: list of elements
+    :return:
+    """
+    rightMax = -1 
+    for i in range(len(arr)-1,-1,-1):
+        newMax = max(rightMax, arr[i])
+        arr[i] = rightMax
+        rightMax = newMax
+    return arr
+
