@@ -83,6 +83,14 @@ def replace_max_element(arr):
 # iS IT A SUBSEQUENCE
 
 def isSubsequence(s,t):
+    """
+    using a while loop to iterate over s and t. If i == the length of s then it should return complete
+    O(n) is the right way to do it. 
+
+    :param s: sub
+    :param t: full string
+    :return: 
+    """
     i = 0
     j = 0
     while i < len(s) and j < len(t):
