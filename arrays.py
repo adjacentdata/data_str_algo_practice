@@ -98,3 +98,19 @@ def isSubsequence(s,t):
             i+=1
         j+=1
     return i == len(s)
+
+#LENGTH OF LAST WORD 
+
+def length_of_last_word(strings):
+    return len(strings.split()[-1])
+
+def len_of_last(s):
+    lt = s.split(" ")
+    n = len(lt) - 1
+    while n >= 0:
+        if lt[n] == "":
+            n -= 1
+        else:
+            return len(lt[n])
+
+print(len_of_last(please))
