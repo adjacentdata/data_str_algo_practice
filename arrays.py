@@ -1,4 +1,9 @@
 # Arrays (Following Neetcodes Questions)
+
+#Example of an Array
+arr = [1,2,3,4]
+
+
 # CONTAINS DUPLICATE
 def contains_duplicate(nums):
     """
