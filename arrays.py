@@ -119,3 +119,28 @@ def len_of_last(s):
             return len(lt[n])
 
 print(len_of_last(please))
+
+# LONGEST COMMON PREFIX
+def longestCommonPrefix(strs):
+    """
+    Build a string containing prefix. n^2 when looping each string.
+    Reduction method might be the best way.
+    set the prefix = flower and loop through the array
+    run a while loop
+    :type strs: List[str]
+    :rtype: str
+    """
+    if len(strs) == 0:
+        return ""
+    if len(strs) == 1:
+        return(strs[0])
+    pref = strs[0]
+    plen = len(pref)
+
+    for s in strs[1:]:
+        while pref != s[0:plen]:
+            pref = pref[0:(plen-1)]
+            plen-= 1
+        if plen == 0:
+            return("")
+    return pref
