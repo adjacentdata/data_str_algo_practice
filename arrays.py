@@ -3,6 +3,9 @@
 #Example of an Array
 arr = [1,2,3,4]
 
+### Diff array methods:
+# Hash Map, Hash Map goes to 0, 
+
 
 # CONTAINS DUPLICATE
 def contains_duplicate(nums):
