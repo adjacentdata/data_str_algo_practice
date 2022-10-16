@@ -2,6 +2,7 @@
 
 #Example of an Array
 arr = [1,2,3,4]
+hashing_map = {}
 
 ### Diff array methods:
 # Hash Map, Hash Map goes to 0, 
