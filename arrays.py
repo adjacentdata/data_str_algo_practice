@@ -152,11 +152,11 @@ def longestCommonPrefix(strs):
 #Pascals Triangle Problem
 
 def pascal_triangle(numRows):
-     triangle=[]
-     for i in range(numRows):
-         triangle.append([1])
-         if i>1:
-             for j in range(i-1):
-                 triangle[i].append(triangle[i-1][j] + triangle[i-1][j+1])
-        if i > 0:
-            triangle[i].append(1)
+    triangle=[[1]]
+    for i in range(numRows-1):
+        temp = [0] + triangle[-1] + [0]
+        row = []
+        for j in range(len(triangle[-1])+1):
+            row.append(temp[j]+temp[j+1])
+        triangle.append(row)
+    return triangle
