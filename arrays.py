@@ -45,7 +45,7 @@ def twoSum(nums, target):
 print(twoSum(nums,target))
 
 
-# isAnagram
+# isAnagram (Checked)
 # O(n^2)
 
 s = "anagram"
@@ -54,7 +54,7 @@ t = "nagaram"
 def isAnagram_brute(s,t):
      """
         create two hash sets to store the counts of each string.
-        When looping, add the letter and add 1 + hash.get(value if exists, or it becomes 0)
+        When looping, add the letter and add 1 + hash.get(value if exists, or it becomes a default 0)
         Then compare the hash sets     
     :param s: string
     :param t: string
